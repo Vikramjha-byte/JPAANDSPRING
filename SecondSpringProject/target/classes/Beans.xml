@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean class="com.beans.Student" id="student">
+        <constructor-arg name="student_id" value="101"></constructor-arg>
+        <constructor-arg name="student_name" value="Vikram"></constructor-arg>
+        <constructor-arg name="student_address" value="Darbhanga"></constructor-arg>
+        <constructor-arg name="student_rollno" value="563248"></constructor-arg>
+        <constructor-arg name="course" ref="courses"></constructor-arg>
+        </bean>
+        <bean class="com.beans.Course" id="courses">
+        <constructor-arg name="course_id" value="1"></constructor-arg>
+        <constructor-arg name="course_name" value="Spring"></constructor-arg>
+        <constructor-arg name="course_duration" value="6 months"></constructor-arg>
+        </bean>
+</beans>
